@@ -27,3 +27,8 @@ $ cd src
 $ hadoop jar BtoS.jar BinFilesToHadoopSeqFile /images/imageset.txt /input/seq
 $ hadoop jar ImgDup.jar ImgDup /input/seq /output
 ```
+
+# Print output
+```
+$ hadoop fs -cat /output/part-r-00000
+```
