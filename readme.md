@@ -1,6 +1,6 @@
-#Hadoop duplicate images detection using Skein Hash
+# Hadoop duplicate images detection using Skein Hash
 
-#How to run:
+# How to run:
 - Install docker
 - Follow the steps below:
 ```
@@ -10,16 +10,16 @@ $ docker-compose -p hadoop-sandbox up -d
 $ cd ..
 ```
 
-#FOR Linux & macOS
+# FOR Linux & macOS
 ```
-docker run -it --rm --name hadoop-shell --network hadoop-sandbox -e "CORE_CONF_fs_defaultFS=hdfs://hadoop-namenode:8020" --mount type=bind,src=$PWD,dst=/assignment -e "CLUSTER_NAME=hadoop-sandbox" -t naokichau/hadoop-shell /bin/bash
+$ docker run -it --rm --name hadoop-shell --network hadoop-sandbox -e "CORE_CONF_fs_defaultFS=hdfs://hadoop-namenode:8020" --mount type=bind,src=$PWD,dst=/assignment -e "CLUSTER_NAME=hadoop-sandbox" -t naokichau/hadoop-shell /bin/bash
 ```
-#FOR Windows
+# FOR Windows
 ```
-docker run -it --rm --name hadoop-shell --network hadoop-sandbox -e "CORE_CONF_fs_defaultFS=hdfs://hadoop-namenode:8020" -v "/[YOUR PARTITION LETTER]/[PATH TO THIS FOLDER]:/assignment" -e "CLUSTER_NAME=hadoop-sandbox" -t naokichau/hadoop-shell /bin/bash
+$ docker run -it --rm --name hadoop-shell --network hadoop-sandbox -e "CORE_CONF_fs_defaultFS=hdfs://hadoop-namenode:8020" -v "/[YOUR PARTITION LETTER]/[PATH TO THIS FOLDER]:/assignment" -e "CLUSTER_NAME=hadoop-sandbox" -t naokichau/hadoop-shell /bin/bash
 ```
 
-#In hadoop-shell
+# In hadoop-shell
 ```
 $ cd assignment
 $ hadoop fs -put ./images /images
